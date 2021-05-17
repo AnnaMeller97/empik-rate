@@ -1,6 +1,5 @@
 package empik.user.rate.github;
 
-import empik.user.rate.UserController;
 import empik.user.rate.domain.UserDto;
 import empik.user.rate.exception.GithubException;
 import empik.user.rate.exception.UserNotFound;

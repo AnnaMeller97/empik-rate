@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
 
-    private final GithubGateway githubGateway;
+    private final GithubGateway githubApi;
+    private final RequestDao requestDao;
 
     public UserDto getUserRate(String login) {
-        return githubGateway.getGithubUser(login);
+        requestDao.logRequest(login);
+        return githubApi.getGithubUser(login);
     }
 }
